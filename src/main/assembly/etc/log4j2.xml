@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration status="WARN">
+	<Appenders>
+		<Console name="CONSOLE" target="SYSTEM_OUT">
+			<PatternLayout pattern="%style{%d{yyyy-MM-dd HH:mm:ss} }{white}%highlight{%level}{FATAL=bright red, ERROR=bright red, WARN=bright yellow, INFO=bright green, DEBUG=cyan, TRACE=yellow}%style{ [}{white}%style{%t}{bright,magenta}%style{] %c{1}:}{white}%style{%L}{bright,blue}%style{: }{white}%m %X{megatron_request}%n"/>
+		</Console>
+	</Appenders>
+	<Loggers>
+		<Logger name="dk.langli" level="ERROR"/>
+		<Root level="ERROR">
+			<AppenderRef ref="CONSOLE" level="ERROR" />
+		</Root>
+	</Loggers>
+</Configuration>
+
